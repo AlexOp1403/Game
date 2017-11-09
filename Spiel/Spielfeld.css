@@ -1,0 +1,108 @@
+div {
+    position:fixed;
+}
+#meinSpielfeld {
+    left:0px;
+    top:50px;
+    width:1500px;
+    height:800px;
+    background-color:green;
+}
+#pokerkarte {
+    left:10px;
+    top:100px;
+    width:185px;
+    height:290px;
+    background-image:url('./images/pokerkarte.jpg');
+  }
+#ass {
+    left:100px;
+    top:100px;
+    width:220px;
+    height:290px;
+    background-image:url('./images/ass.png');
+}
+#zwei {
+    left:100px;
+    top:10px;
+    width:200px;
+    height:290px;
+    background-image:url('./images/zwei.png');
+}
+#drei {
+    left:100px;
+    top:10px;
+    width:180px;
+    height:270px;
+    background-image:url('./images/drei.png');
+}
+#vier {
+    left:100px;
+    top:10px;
+    width:185px;
+    height:275px;
+    background-image:url('./images/vier.png');
+}
+#fünf {
+    left:100px;
+    top:10px;
+    width:180px;
+    height:265px;
+    background-image:url('./images/fünf.png');
+}
+#sechs {
+    left:100px;
+    top:10px;
+    width:190px;
+    height:265px;
+    background-image:url('./images/sechs.png');
+}
+#sieben {
+    left:100px;
+    top:10px;
+    width:190px;
+    height:265px;
+    background-image:url('./images/sieben.png');
+}
+#acht {
+    left:100px;
+    top:10px;
+    width:150px;
+    height:210px;
+    background-image:url('./images/acht.png');
+}
+#neun {
+    left:100px;
+    top:10px;
+    width:190px;
+    height:265px;
+    background-image:url('./images/neun.png');
+}
+#zehn {
+    left:100px;
+    top:10px;
+    width:190px;
+    height:265px;
+    background-image:url('./images/zehn.png');
+}
+#bube {
+    left:100px;
+    top:10px;
+    width:180px;
+    height:270px;
+    background-image:url('./images/bube.png');
+}
+#königin {
+    left:100px;
+    top:10px;
+    width:180px;
+    height:285px;
+    background-image:url('./images/königin.png');
+}
+#könig {
+    left:100px;
+    top:10px;
+    width:190px;
+    height:270px;
+    background-image:url('./images/könig.jpg');
+}

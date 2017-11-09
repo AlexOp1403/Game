@@ -45,7 +45,7 @@ switch (c) {
     points=points+card;
     break;
   case 3:
-    card=img.src="./images/drei.png"
+    card=img.sr￼c="./images/drei.png"
     points=points+card;
     break;
   case 4:

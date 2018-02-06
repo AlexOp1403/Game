@@ -1,5 +1,5 @@
 var move;
-var cpupoints;
+var points;
 var card;
 var bet;
 var money;

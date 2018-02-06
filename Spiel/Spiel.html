@@ -4,26 +4,23 @@
 <meta charset="utf-8" />
 <title> Spiel </title>
 <link rel="stylesheet" href="Spielfeld.css">
-<script src="Spiel.js" type="text/javascript"></script>
 </head>
 <body>
   <div id="meinSpielfeld">
       <div id="pokerkarte"></div>
       <div id="card"></div>
   </div>
-<form>
-  <a href = "" onclick="addCard();"
-  <button type="button">Karte</button></a>
-  <button type="button"> genug </button>
-  <button type="button" id="start">Start</button>
-  <button type="button" id="restart">neu starten</button>
-  <button type="button" id="stop">Stop</button>
-  <a href = "" onclick="bet1000();"
-  <button type="button">1000</button></a>
-  <a href = "" onclick="bet2000();"
-  <button type="button">2000</button></a>
-  <a href = "" onclick="bet3000();"
-  <button type="button">3000</button></a>
-</form>
+  <button onclick="karte();" type="button">Karte</button>
+  <button onclick="genug();" type="button"> genug </button>
+  <button onclick="start();" type="button" id="start">Start</button>
+  <button onclick="restart();" type="button" id="restart">neu starten</button>
+  <button onclick="stop();" type="button" id="stop">Stop</button>
+  <button onclick="bet1000()" type="button">1000</button>
+  <button onclick="bet2000()" type="button">2000</button>
+  <button onclick="bet3000()" type="button">3000</button>
+  <button onclick="mymoney()" type="button">Mein Geld</button>
+  <button onclick="cpumoney()" type="button">CPU Geld</button>
+
+<script src="Spiel.js" type="text/javascript"></script>
 </body>
 </html>

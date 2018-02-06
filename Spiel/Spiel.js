@@ -1,104 +1,267 @@
 var move;
-var point;
+var cpupoints;
 var card;
 var bet;
 var money;
 
+var movecpu;
+var pointscpu;
+var cardcpu;
+var betcpu;
+var moneycpu;
+
+var pott;
+
+card=0;
+money=5000;
 move=6;
 points=0;
-card=0
-money=5000
+bet=0;
+
+cardcpu=0;
+moneycpu=5000;
+movecpu=6;
+pointscpu=0;
+betcpu=0;
+
+pott = 0
 
 function start(){
-  //hier wird das Spiel gestartet
+  karte();
 }
 
 function restart(){
-  //hier wird das Speil neugestartet
+  stop();
+  card=0;
+  money=5000;
+  move=6;
+  points=0;
+  bet=0;
+  pott=0;
+  start();
 }
 
 function stop(){
-  //hier wird das Spiel gestoppt
+  pott=0;
+  window.location.reload();
+}
+
+function karte(){
+  if (move > 0 || points < 21) {
+    addCard();
+    move--;
+    console.log(move);
+  }
+  else{
+    console.log("cpu hat gewonnnen");
+    restart();
+  }
+}
+
+function genug(){
+  while (movecpu > 0 && pointscpu < 22) {
+    addCardCpu();
+    movecpu--;
+    console.log(movecpu);
+  }
+    if (pointscpu > 21 || move == 0 || movecpu == 0 || points == 21){
+      console.log("du hast gewonnen");
+      money=pott+money;
+    }
+      else{
+        console.log('cpu hat gewonnen')
+        moneycpu=pott+moneycpu;
+      }
 }
 
 function bet1000(){
-  money=money-1000;
-  console.log(money);
+  money = money - 1000;
+  moneycpu = moneycpu - 1000;
+  pott = 2000;
+  console.log("der pott ist "+pott+"");
 }
 function bet2000(){
-  money=money-2000;
-  console.log(money);
+  money=money - 2000;
+  moneycpu = moneycpu - 2000;
+  pott = 4000;
+  console.log("der pott ist "+pott+"");
 }
 function bet3000(){
-  money=money-3000;
-  console.log(money);
+  money=money - 3000;
+  moneycpu = moneycpu - 3000;
+  pott = 6000;
+  console.log("der pott ist "+pott+"");
+}
+function mymoney(){
+  alert(money);
+}
+function cpumoney(){
+  alert(moneycpu);
 }
 function addCard(){
-var c = Math.round(1+Math.random()*12);
-switch (c) {
+card = Math.round(1+Math.random()*12);
+switch (card) {
   case 1:
-    card=img.src="./images/ass.png"
+    src="./images/ass.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 2:
-  card = img.src="./images/zwei.png"
+    src="./images/zwei.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 3:
-    card=img.sr￼c="./images/drei.png"
+    src = "./images/drei.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 4:
-    card=img.src="./images/vier.png"
+    src="./images/vier.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 5:
-    card=img.src="./images/fünf.png"
+    src="./images/fünf.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 6:
-    card=img.src="./images/sechs.png"
+    src="./images/sechs.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 7:
-    card=img.src="./images/sieben.png"
+    src="./images/sieben.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 8:
-    card=img.src="./images/acht.png"
+    src="./images/acht.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 9:
-    card=img.src="./images/neun.png"
+    src="./images/neun.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 10:
-    card=img.src="./images/zehn.png"
+    src="./images/zehn.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 11:
-    card=img.src="./images/bube.png"
+    src="./images/bube.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 12:
-    card=img.src="./images/königin.png"
+    src="./images/königin.png";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
   case 13:
-    card=img.src="./images/könig.jpg"
+    src="./images/könig.jpg";
     points=points+card;
+    console.log("es war "+ card +"");
+    console.log("du hast jetzt "+ points +"");
     break;
-}
-}
-
-if (move==0){
-  if (points<=pointscpu)
-  restart();
+  }
 }
 
-if (points==21){
-  stop();
-}
-if (points>=21&&move==0){
-  stop()
-}
+function addCardCpu(){
+  cardcpu = Math.round(1+Math.random()*12);
+  switch (cardcpu) {
+    case 1:
+      src="./images/ass.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 2:
+      src="./images/zwei.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 3:
+      src = "./images/drei.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("du hast jetzt "+ pointscpu +"");
+      break;
+    case 4:
+      src="./images/vier.png";
+      pointcpus=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 5:
+      src="./images/fünf.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 6:
+      src="./images/sechs.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu+"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 7:
+      src="./images/sieben.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 8:
+      src="./images/acht.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 9:
+      src="./images/neun.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 10:
+      src="./images/zehn.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 11:
+      src="./images/bube.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 12:
+      src="./images/königin.png";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    case 13:
+      src="./images/könig.jpg";
+      pointscpu=pointscpu+cardcpu;
+      console.log("es war "+ cardcpu +"");
+      console.log("er hat jetzt "+ pointscpu +"");
+      break;
+    }
+  }

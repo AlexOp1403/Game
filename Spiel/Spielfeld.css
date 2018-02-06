@@ -15,6 +15,13 @@ div {
     height:290px;
     background-image:url('./images/pokerkarte.jpg');
   }
+  
+#card {
+    left:200px;
+    top:100px;
+    width:185px;
+    height:290px;
+}
 #ass {
     left:100px;
     top:100px;

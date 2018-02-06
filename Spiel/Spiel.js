@@ -102,79 +102,79 @@ function addCard(){
 card = Math.round(1+Math.random()*12);
 switch (card) {
   case 1:
-    src="./images/ass.png";
+    document.getElementById("card").src="images/ass.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 2:
-    src="./images/zwei.png";
+  document.getElementById("card").src="images/zwei.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 3:
-    src = "./images/drei.png";
+  document.getElementById("card").src = "images/drei.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 4:
-    src="./images/vier.png";
+  document.getElementById("card").src="images/vier.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 5:
-    src="./images/fünf.png";
+  document.getElementById("card").src="images/fünf.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 6:
-    src="./images/sechs.png";
+  document.getElementById("card").src="images/sechs.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 7:
-    src="./images/sieben.png";
+  document.getElementById("card").src="images/sieben.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 8:
-    src="./images/acht.png";
+  document.getElementById("card").src="images/acht.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 9:
-    src="./images/neun.png";
+  document.getElementById("card").src="images/neun.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 10:
-    src="./images/zehn.png";
+  document.getElementById("card").src="images/zehn.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 11:
-    src="./images/bube.png";
+  document.getElementById("card").src="images/bube.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 12:
-    src="./images/königin.png";
+  document.getElementById("card").src="images/königin.png";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");
     break;
   case 13:
-    src="./images/könig.jpg";
+  document.getElementById("card").src="images/könig.jpg";
     points=points+card;
     console.log("es war "+ card +"");
     console.log("du hast jetzt "+ points +"");

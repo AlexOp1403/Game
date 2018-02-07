@@ -11,6 +11,7 @@ var betcpu;
 var moneycpu;
 
 var pott;
+var x;
 
 card=0;
 money=5000;
@@ -24,10 +25,18 @@ movecpu=6;
 pointscpu=0;
 betcpu=0;
 
-pott = 0
+pott = 0;
+x=0;
 
 function start(){
-  karte();
+  if(x==0){
+    if(pott==0){
+     alert("du musst ein gebot abgeben");
+    }else{
+    karte();
+    x=1;
+    }
+  }
 }
 
 function restart(){
@@ -38,6 +47,7 @@ function restart(){
   points=0;
   bet=0;
   pott=0;
+  x=0;
   start();
 }
 
@@ -47,19 +57,21 @@ function stop(){
 }
 
 function karte(){
-  if (move > 0 || points < 21) {
+  if (move > 0 && points < 21) {
     addCard();
     move--;
     console.log(move);
   }
-  else{
+  else if (points > 21){
     console.log("cpu hat gewonnnen");
-    restart();
+  }
+  else if(points==21){
+    console.log("du hast gewonnen");
   }
 }
 
 function genug(){
-  while (movecpu > 0 && pointscpu < 22) {
+  while (movecpu > 0 && pointscpu < 22 && points > pointscpu) {
     addCardCpu();
     movecpu--;
     console.log(movecpu);

@@ -60,7 +60,7 @@ function karte(){
   if (move > 0 && points < 21) {
     addCard();
     move--;
-    console.log(move);
+    console.log("Du hast noch " + move + " Züge");
   }
   else if (points > 21){
     console.log("cpu hat gewonnnen");
@@ -90,19 +90,19 @@ function bet1000(){
   money = money - 1000;
   moneycpu = moneycpu - 1000;
   pott = 2000;
-  console.log("der pott ist "+pott+"");
+  console.log("der pott liegt bei "+pott+"");
 }
 function bet2000(){
   money=money - 2000;
   moneycpu = moneycpu - 2000;
   pott = 4000;
-  console.log("der pott ist "+pott+"");
+  console.log("der pott liegt bei "+pott+"");
 }
 function bet3000(){
   money=money - 3000;
   moneycpu = moneycpu - 3000;
   pott = 6000;
-  console.log("der pott ist "+pott+"");
+  console.log("der pott liegt bei "+pott+"");
 }
 function mymoney(){
   alert(money);
@@ -117,7 +117,7 @@ switch (card) {
     document.getElementById("card").src="images/ass.png";
     points=points+card;
     console.log("es war "+ card +"");
-    console.log("du hast jetzt "+ points +"");
+    console.log("du hast jetzt " + points + "");
     break;
   case 2:
   document.getElementById("card").src="images/zwei.png";
